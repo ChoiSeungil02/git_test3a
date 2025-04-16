@@ -2,24 +2,25 @@ package git_test3a;
 
 public class Sort {
 
-	public static void main(String[] args) {
+	public static void sort(int[] a) {
 		quickSort(a, 0, a.length - 1);
 
 	}
 	static void swap(int[] a, int i, int j) {
-		int tmep = a[i];
+		int temp = a[i];
 		a[i] = a[j];
 		a[j] = temp;
 	}
 	static int partition(int[] a, int start, int end) {
 		int value = a[end];
 		int i = start -1;
-		for (int j = start; j <= end, j++){
+		for (int j = start; j <= end; j++){
 			if (a[j] < value)
 				swap(a, ++i, j);
 			swap(a, i+1, end);
-			return i + 1;
 		}
+			return i + 1;
+		
 
 	}
 	static void quickSort(int[] a, int start, int end) {
